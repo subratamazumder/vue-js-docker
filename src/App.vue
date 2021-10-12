@@ -1,5 +1,5 @@
 <template>
-  <Registration msg="Welcome to ePrescription Demo" version="1.0" firstName="" lastName=""/>
+  <Registration msg="Welcome to ePrescription Demo" version="3.0" firstName="" lastName=""/>
 </template>
 
 <script>

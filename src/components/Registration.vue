@@ -15,13 +15,15 @@
     <h4>{{ validationMsg }}</h4>
     <br />
     <div id="responseTable" style="display: none">
-      <table class="center">
+      <table class="styled-table">
+        <thead>
         <tr>
           <th>API Response Code</th>
           <th>Registration ID</th>
           <th>Kubernetes POD</th>
-          <th>Registration API Version</th>
+          <th>API Version</th>
         </tr>
+        </thead>
         <tr>
           <td>{{ statusCode }}</td>
           <td>{{ registrationId }}</td>
@@ -140,13 +142,69 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
-th,
+/* th,
 td {
   border: 1px solid black;
+} */
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    margin-left: auto;
+  margin-right: auto;
+  align-content: center;
+}
+.styled-table thead tr {
+    background-color: #77aca2;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
 }
 .center {
   margin-left: auto;
   margin-right: auto;
   align-content: center;
+}
+button {
+  text-align: center;
+  margin: 5px;
+  font-size: 20px ;
+  background-color: #77aca2;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 20px;
+  line-height: 35px;
+  padding: 0 10px 0 11px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: 100px;
 }
 </style>
