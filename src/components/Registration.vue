@@ -86,10 +86,8 @@ export default {
         "http://acf863c48dd274523ac1354cbca27434-1448754667.eu-west-2.elb.amazonaws.com/ep-registration-service/registrations";
       const res = await fetch(url, {
         method: "POST",
-        // mode: "no-cors",
-        // cache: "no-cache",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json"
         },
         body: JSON.stringify(requestPayload),
       });
